@@ -1,0 +1,24 @@
+There will be six entities:
+1. Hotels
+2. Employees
+3. Rooms
+4. Bookings
+5. Guests
+6. Payment
+
+The system will be implemented in mySQL with some JDBC.
+
+Employee(employeeID, name, role, phone, email, wage)
+Hotel(address, name, area, roomTotal, type)
+Room(roomID, type, pricePerNight, bedTotal, address, roomNumber)
+Booking(reservationID, phone, email, bookingTime, checkInDate, checkOutDate, guestsTotal)
+Guest(guestID, name, nationality, age)
+Payment(paymentID, amount, method, information, paymentDate)
+
+Each entity will have a unique ID as their primary key so that users of the database can
+accurately and precisely access each entry. Hotel will have its address as its unique identifier.
+Since the system is designed for a chain of hotels, there is a Hotel entity to keep track of all the
+locations. Each location will contain rooms, which is also an entity. Employees will work at one
+location. Bookings are made and associated with payment information through the Payment
+entity. Each Booking consists of Guests. The relationships between the entities are represented
+in the ER Diagram / Relational schema
